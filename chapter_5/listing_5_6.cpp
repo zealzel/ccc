@@ -1,16 +1,19 @@
 #include <cstdio>
 
 struct BaseClass {
-  int the_answer() const { return 42; }
+  int the_answer() const {
+    return 42;
+  }
   const char* member = "gold";
-private:
+
+  private:
   const char* holistic_detective = "Dirk Gently";
 };
 
 struct DerivedClass : BaseClass {
   void announce_agency() {
     // This line doesn't compile:
-    // printf("%s's Holistic Detective Agency\n", holistic_detective); {
+    // printf("%s's Holistic Detective Agency\n", holistic_detective);
   }
 };
 

@@ -1,4 +1,4 @@
-﻿#include <cstdio>
+#include <cstdio>
 #include <stdexcept>
 
 template <typename To, typename From>

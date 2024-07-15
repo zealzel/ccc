@@ -7,7 +7,10 @@ struct BaseClass {
 };
 
 struct DerivedClass : BaseClass {
-  const char* final_message() const override {
+  // const char* final_message() const override {
+  //   return "We apologise for the inconvenience.";
+  // }
+  const char* final_message() const {
     return "We apologise for the inconvenience.";
   }
 };

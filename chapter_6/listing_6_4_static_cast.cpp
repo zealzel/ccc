@@ -1,4 +1,4 @@
-﻿#include <cstdio>
+#include <cstdio>
 
 short increment_as_short(void* target) {
   auto as_short = static_cast<short*>(target);
@@ -9,5 +9,5 @@ short increment_as_short(void* target) {
 int main() {
   short beast{ 665 };
   auto mark_of_the_beast = increment_as_short(&beast);
-  printf("%d is the mark_of_the_beast.", mark_of_the_beast);
+  printf("%d is the mark_of_the_beast.\n", mark_of_the_beast);
 }

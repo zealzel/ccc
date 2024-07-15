@@ -19,7 +19,7 @@ struct FileLogger : Logger {
 
 struct Bank {
   Bank(Logger& logger)
-      : logger{ logger } {}
+      : logger{ logger } { }
   void make_transfer(long from, long to, double amount) {
     //
     logger.log_transfer(from, to, amount);
@@ -31,7 +31,11 @@ struct Bank {
 
 int main() {
   ConsoleLogger logger;
+  FileLogger flogger;
   Bank bank{ logger };
   bank.make_transfer(1000, 2000, 49.95);
   bank.make_transfer(2000, 4000, 20.00);
+  Bank bank_file{ flogger };
+  bank_file.make_transfer(1000, 2000, 49.95);
+  bank_file.make_transfer(2000, 4000, 20.00);
 }
